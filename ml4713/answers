@@ -1,0 +1,46 @@
+(1)
+In [1]: import os.path
+
+In [2]: ?os.path.abspath
+Type:       function
+String Form:<function abspath at 0x7fd893bb99b0>
+File:       /usr/lib/python2.7/posixpath.py
+Definition: os.path.abspath(path)
+Docstring:  Return an absolute path.
+
+###From the output, we can see that it is from /usr/lib/python2.7/posixpath.py
+
+(2)
+num=!ls -l /etc|wc -l
+
+num
+Out[4]: ['235']
+
+###From the output, we can see that num is 235, however there are only 234 files in /etc since the first line summaries the total number which shoudn't be counted in.
+
+(3)
+import math
+num=int (num[0])
+math.sqrt(num)
+Out[20]: 15.329709716755891
+
+(4)
+import numpy
+x=12345
+%timeit x**2
+10000000 loops, best of 3: 97.8 ns per loop
+%timeit x*x
+10000000 loops, best of 3: 74.6 ns per loop
+%timeit numpy.square(x)
+100000 loops, best of 3: 2.1 µs per loop
+
+###x*x is the fastest command to calculate the result.
+
+(5)
+%lsmagic
+Available cell magics:
+%%!  %%HTML  %%SVG  %%bash  %%capture  %%debug  %%file  %%html  %%javascript  %%latex  %%perl  %%prun  %%pypy  %%python  %%python3  %%ruby  %%script  %%sh  %%svg  %%sx  %%system  %%time  %%timeit  %%writefile
+
+###Total 24 cell magics
+
+
